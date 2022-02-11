@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+         <section class="studentsection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-head">
+                                <h3 class="ms-3">  Add Student Data</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form">
+                                    <form action="" id="student_form">
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="Name">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="Roll Number">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="Class">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="Photo">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input id="male" type="radio" value="Male" name="gender" checked> <label
+                                                for="male">Male</label>
+                                            <input id="female" type="radio" value="Female" name="gender"> <label
+                                                for="female">Female</label>
+                                        </div>
+    
+                                        Marks
+                                        <hr>
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="Bangla">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="English">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="Math">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="Science">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="Ict">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input class="form-control" type="text" placeholder="Religion">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input class="form-btn" type="submit">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-lg-8">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>S/N</th>
+                                            <th>Name</th>
+                                            <th>Roll</th>
+                                            <th>Class</th>
+                                            <th>Gender</th>
+                                            <th>Points</th>
+                                            <th>CGPA</th>
+                                            <th>Photo</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody  class="std-list">
+                                         
+                                    </tbody> 
+                                </table>
+                                <div class="parent">
+                                    <div class="view">
+      
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+         </section>
+
+         <section class="theme">
+               <div class="container">
+                     <div class="row">
+                          <div class="col">
+                               <div class="divi">
+                                     <div class="header">
+                                          <div class="top">
+                                            <img src="./img/divi-logo-white.svg" alt="">
+                                            <span>Divi Theme Options</span>
+                                          </div>
+                                          <div class="menu">
+                                            <ul>
+                                                <li><a href="">General</a></li>
+                                                <li><a href="">Navigation</a></li>
+                                                <li><a href="">Builder</a></li>
+                                                <li><a href="">Layout</a></li>
+                                                <li><a href="">Ads</a></li>
+                                                <li><a href="">SEO</a></li>
+                                                <li><a href="">Integration</a></li>
+                                                <li><a href="">Updates</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li><a href=""><i class="fa-solid fa-arrow-right-arrow-left"></i></a></li>
+                                                <li><a href=""><i class="fa-solid fa-arrow-rotate-left"></i></a></li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                               </div>
+                          </div>   
+                     </div>
+               </div>
+         </section>
+    </main>
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="function.js"></script>
+    <script src="app.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
