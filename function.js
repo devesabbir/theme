@@ -1,23 +1,59 @@
+function Results() {
+    this.gpaCal = (bn, en, mat, sci, ict, rel) => {
+        let marks = (bn + en + mat + sci + ict + rel) / 6
+        let gpa;
+        let grade;
+        if (marks >= 0 && marks <= 32) {
+            gpa = 0;
+            grade = 'F'
+        } else if (marks >= 33 && marks <= 39) {
+            gpa = 1
+            grade = 'D'
+        } else if (marks >= 40 && marks <= 49) {
+            gpa = 2
+            grade = 'C'
+        } else if (marks >= 50 && marks <= 59) {
+            gpa = 3
+            grade = 'B'
+        } else if (marks >= 60 && marks <= 69) {
+            gpa = 3
+            grade = 'A-'
+        } else if (marks >= 70 && marks <= 79) {
+            gpa = 4
+            grade = 'A'
+        } else if (marks >= 80) {
+            gpa = 5
+            grade = 'A+'
+        }
+
+        return {
+            gpa: gpa,
+            grade: grade,
+        }
+    }
+}
+
 /**
  * 
  * @param {*} key 
  * @param {*} value 
  */
-function dataSend(key,value){
-   localStorage.setItem(key,JSON.stringify(value))
+function dataSend(key, value) {
+    localStorage.setItem(key, JSON.stringify(value))
 }
 
 /**
  * 
  * @param {*} key 
  */
-function dataGet(key){
+function dataGet(key) {
     return JSON.parse(localStorage.getItem(key))
 }
 /**
  * Student Data Map
  */
 function showData() {
+    // let res = new Results();
     let data = dataGet('Students')
     let showAll = '';
     data.map((stu, index) => {
@@ -29,8 +65,8 @@ function showData() {
         <td>${stu.Roll}</td>
         <td>${stu.Class}</td>
         <td>${stu.Gender}</td>
-        <td>${gpa(stu.Bangla,stu.English,stu.Math,stu.Science,stu.Ict,stu.Religion)}</td>
-        <td>g</td>
+        <td>${new Results().gpaCal(stu.Bangla,stu.English,stu.Maath,stu.Science,stu.Ict,stu.Religion).gpa}</td>
+        <td></td>
         <td><img src="${stu.Photo}" alt=""></td>
         <td>
             <button onclick="view(${index})">View</button>
@@ -39,8 +75,11 @@ function showData() {
      </tr> 
         
      `
+
+    
     })
 
+  
     std_list.innerHTML = showAll
 }
 /**
@@ -105,7 +144,7 @@ function view(i) {
                    <tr>
                        <td>${data[i].Bangla}</td>
                        <td>${data[i].English}</td>
-                       <td>${data[i].Math}</td>
+                       <td>${data[i].Maath}</td>
                        <td>${data[i].Science}</td>
                        <td>${data[i].Ict}</td>
                        <td>${data[i].Religion}</td>
@@ -125,14 +164,6 @@ function view(i) {
 /**
  * Close Button
  */
-function closse(){
+function closse() {
     viewpane.classList.remove('active')
-}
-
-
-function gpa(ban,eng,mat,sci,ict,rel){
-     let total = ban + eng + mat + sci + ict + rel 
-     let  avg  = total / 6
-
-    return avg;
 }

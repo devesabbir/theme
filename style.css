@@ -140,6 +140,11 @@ td img {
    background-color: #8f42ed;
 }
 
+.menu ul li a.active:hover{
+   background-color: #8f42ed;
+}
+
+
 .theme .divi .option-pane {
   background-color: #ffffff;
   padding: 10px 10px;
@@ -167,6 +172,11 @@ td img {
   cursor: pointer;
 }
 
+
+
+.theme .divi .option-pane .pane .panel-box .chk {
+  margin-right: 25%;
+}
 
 .chkbtn{
   position: relative;

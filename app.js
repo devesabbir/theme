@@ -36,12 +36,12 @@ student_form.addEventListener('submit', function (e) {
             Class: cLass.value,
             Photo: phoTo.value,
             Gender: genDer.value,
-            Bangla:  Number(bn.value),
-            English: Number(en.value),
-            Math: Number(math.value),
-            Science: Number(science.value),
-            Ict: Number(ict.value),
-            Religion: Number(religion.value),
+            Bangla:  parseFloat(bn.value),
+            English: parseFloat(en.value),
+            Maath: parseFloat(math.value),
+            Science: parseFloat(science.value),
+            Ict: parseFloat(ict.value),
+            Religion: parseFloat(religion.value),
 
         })
 
