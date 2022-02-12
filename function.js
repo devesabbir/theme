@@ -66,7 +66,7 @@ function showData() {
         <td>${stu.Class}</td>
         <td>${stu.Gender}</td>
         <td>${new Results().gpaCal(stu.Bangla,stu.English,stu.Maath,stu.Science,stu.Ict,stu.Religion).gpa}</td>
-        <td></td>
+        <td>${new Results().gpaCal(stu.Bangla,stu.English,stu.Maath,stu.Science,stu.Ict,stu.Religion).grade}</td>
         <td><img src="${stu.Photo}" alt=""></td>
         <td>
             <button onclick="view(${index})">View</button>
