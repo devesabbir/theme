@@ -8,6 +8,7 @@
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 a {
@@ -16,6 +17,10 @@ a {
 
 .parent ul.list-group-flush {
   margin-top: 20px;
+}
+
+section.studentsection {
+  padding: 50px 0;
 }
 
 .close {
@@ -64,9 +69,17 @@ td img {
   padding: 50px 0;
 }
 
+.theme .divi {
+  -webkit-box-shadow: 0px 0px 18px 5px #29242461;
+          box-shadow: 0px 0px 18px 5px #29242461;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 .theme .divi .header {
   background-color: #6c2eb9;
   padding: 10px 0;
+  padding-bottom: 0;
   border-radius: 5px;
 }
 
@@ -92,6 +105,10 @@ td img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #7e3bd0;
+  padding: 0px 15px;
+  margin-top: 10px;
+  padding-left: 0;
 }
 
 .theme .divi .header .menu ul {
@@ -103,7 +120,90 @@ td img {
   margin: 0;
 }
 
-.theme .divi .header .menu ul li {
-  margin: 0 5px;
+.theme .divi .header .menu ul.scnd li a {
+  padding: 10px 10px;
 }
+
+.theme .divi .header .menu ul li a {
+  color: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+  display: block;
+  padding: 10px 20px;
+}
+
+.theme .divi .header .menu ul li a:hover {
+  background-color: #7435C1;
+}
+
+.menu ul li a.active{
+   background-color: #8f42ed;
+}
+
+.theme .divi .option-pane {
+  background-color: #ffffff;
+  padding: 10px 10px;
+}
+
+.theme .divi .option-pane .pane{
+   display: none;
+}
+
+.theme .divi .option-pane .pane.active{
+   display: block;
+}
+
+
+.theme .divi .option-pane .pane .panel-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.theme .divi .option-pane .pane .panel-box .chk .btn label {
+  cursor: pointer;
+}
+
+
+.chkbtn{
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 200px;
+  background: #f1f5f9;
+  height: 40px;
+  cursor: pointer;
+  transition: .4s;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+
+.chkbtn::after {
+  content: '';
+  width: 50%;
+  height: 70%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 6px;
+  left: 4%;
+  pointer-events: none;
+  transition:.5s;
+  border-radius: 5px;
+}
+
+.chkbtn:checked::after {
+  left: 47%;
+ 
+ 
+}
+
+.chkbtn:checked{
+  background: #008bdb;
+}
+
 /*# sourceMappingURL=style.css.map */

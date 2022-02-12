@@ -55,6 +55,25 @@ student_form.addEventListener('submit', function (e) {
 showData()
 
 
+// theme Elements 
+const themMenu = document.querySelectorAll('.menu ul a')
+
+themMenu.forEach( item => {
+    item.addEventListener('click',function(e){
+         e.preventDefault();
+
+         themMenu.forEach( item => {
+             item.classList.remove('active')
+         })
+         
+         item.classList.add('active')
+         let pane = document.querySelector(this.getAttribute('href'))
+         
+         pane.classList.add('active')
+    })
+})
+
+
 
 
 
