@@ -57,19 +57,22 @@ showData()
 
 // theme Elements 
 const themMenu = document.querySelectorAll('.menu ul a')
+const pane = document.querySelectorAll('.pane')
 
 themMenu.forEach( item => {
-    item.addEventListener('click',function(e){
-         e.preventDefault();
+    item.addEventListener('click', function(e){
+          e.preventDefault();
 
          themMenu.forEach( item => {
              item.classList.remove('active')
          })
          
          item.classList.add('active')
-         let pane = document.querySelector(this.getAttribute('href'))
-         
-         pane.classList.add('active')
+         pane.forEach( item => {
+             item.classList.remove('active')
+         })
+         let panel = document.querySelector(this.getAttribute('href'))
+         panel.classList.add('active')
     })
 })
 
