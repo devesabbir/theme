@@ -217,3 +217,19 @@ td img {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.id{
+   position: relative;
+}
+
+.id:after{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   background-color: #fff;
+   width: 100px;
+   height: 100px;
+   
+}
