@@ -60,8 +60,8 @@ const themMenu = document.querySelectorAll('.menu ul a')
 const pane = document.querySelectorAll('.pane')
 
 themMenu.forEach( item => {
-    item.addEventListener('click', function(e){
-          e.preventDefault();
+    item.addEventListener('click', function(event){
+          event.preventDefault()
 
          themMenu.forEach( item => {
              item.classList.remove('active')
