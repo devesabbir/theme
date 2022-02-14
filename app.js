@@ -61,7 +61,9 @@ const pane = document.querySelectorAll('.pane')
 
 themMenu.forEach( item => {
     item.addEventListener('click', function(event){
-          event.preventDefault()
+         event.preventDefault()
+         event.stopPropagation()
+          event.stopImmediatePropagation()
 
          themMenu.forEach( item => {
              item.classList.remove('active')
@@ -71,7 +73,7 @@ themMenu.forEach( item => {
          pane.forEach( item => {
              item.classList.remove('active')
          })
-         let panel = document.getElementById(this.getAttribute('href'))
+         let panel = document.querySelector(this.getAttribute('href'))
          panel.classList.add('active')
     })
 })
