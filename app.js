@@ -55,7 +55,7 @@ student_form.addEventListener('submit', function (e) {
 showData()
 
 
-// theme Elements 
+// get theme Elements 
 const themMenu = document.querySelectorAll('.menu ul a')
 const pane = document.querySelectorAll('.pane')
 
@@ -71,7 +71,7 @@ themMenu.forEach( item => {
          pane.forEach( item => {
              item.classList.remove('active')
          })
-         let panel = document.querySelector(this.getAttribute('href'))
+         let panel = document.getElementById(this.getAttribute('href'))
          panel.classList.add('active')
     })
 })
