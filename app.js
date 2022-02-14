@@ -62,8 +62,6 @@ const pane = document.querySelectorAll('.pane')
 themMenu.forEach( item => {
     item.addEventListener('click', function(event){
          event.preventDefault()
-         event.stopPropagation()
-          event.stopImmediatePropagation()
 
          themMenu.forEach( item => {
              item.classList.remove('active')

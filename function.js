@@ -60,7 +60,12 @@ function dataSend(key, value) {
  * @param {*} key 
  */
 function dataGet(key) {
-    return JSON.parse(localStorage.getItem(key))
+    if(localStorage.getItem(key)){
+        return JSON.parse(localStorage.getItem(key))
+    }else{
+        return false;
+    }
+   
 }
 /**
  * Student Data Map
@@ -69,29 +74,32 @@ function showData() {
     // let res = new Results();
     let data = dataGet('Students')
     let showAll = '';
-    data.map((stu, index) => {
+   
+    if(data){
+        data.map((stu, index) => {
 
-        showAll += `
-        <tr>
-        <td>${index + 1}</td>
-        <td>${stu.Name}</td>
-        <td>${stu.Roll}</td>
-        <td>${stu.Class}</td>
-        <td>${stu.Gender}</td>
-        <td>${new Results().gpaCal(stu.Bangla,stu.English,stu.Maath,stu.Science,stu.Ict,stu.Religion).gpa}</td>
-        <td>${new Results().gpaCal(stu.Bangla,stu.English,stu.Maath,stu.Science,stu.Ict,stu.Religion).grade}</td>
-        <td><img src="${stu.Photo}" alt=""></td>
-        <td>
-            <button onclick="view(${index})">View</button>
-            <button onclick="removeItem(${index})">Delete</button>
-       </td>
-     </tr> 
-        
-     `
-
-
-    })
-
+            showAll += `
+            <tr>
+            <td>${index + 1}</td>
+            <td>${stu.Name}</td>
+            <td>${stu.Roll}</td>
+            <td>${stu.Class}</td>
+            <td>${stu.Gender}</td>
+            <td>${new Results().gpaCal(stu.Bangla,stu.English,stu.Maath,stu.Science,stu.Ict,stu.Religion).gpa}</td>
+            <td>${new Results().gpaCal(stu.Bangla,stu.English,stu.Maath,stu.Science,stu.Ict,stu.Religion).grade}</td>
+            <td><img src="${stu.Photo}" alt=""></td>
+            <td>
+                <button onclick="view(${index})">View</button>
+                <button onclick="removeItem(${index})">Delete</button>
+           </td>
+         </tr> 
+            
+         `
+    
+    
+        })
+    
+    }
 
     std_list.innerHTML = showAll
 }
@@ -168,7 +176,7 @@ function view(i) {
    </div>
        
     `
-        viewpane.classList.add('active')
+   viewpane.classList.add('active')
 
     }
 
