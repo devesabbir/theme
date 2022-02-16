@@ -1,7 +1,29 @@
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+
 .panel-box {
 
+
+
+    .title{
+        h3{
+            font-size: 20px;
+        }
+    }
+
     .input {
-        
+
         input[type="text"] {
             border: none;
             outline: none;
@@ -34,4 +56,17 @@
             text-transform: uppercase;
         }
      }
+
+     .color-plate {
+         margin-right: 30%;
+
+        input {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            border:none;
+            outline:none;
+        }
+     } 
 }

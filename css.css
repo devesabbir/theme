@@ -1,3 +1,22 @@
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+.panel-box .title h3 {
+  font-size: 20px;
+}
+
 .panel-box .input input[type="text"] {
   border: none;
   outline: none;
@@ -27,5 +46,18 @@
   display: inline-block;
   border-radius: 3px;
   text-transform: uppercase;
+}
+
+.panel-box .color-plate {
+  margin-right: 30%;
+}
+
+.panel-box .color-plate input {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  outline: none;
 }
 /*# sourceMappingURL=css.css.map */
